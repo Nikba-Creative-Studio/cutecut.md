@@ -1,0 +1,32 @@
+{% if portfolio|length > 0 %}
+<section>
+    <div class="container px-4 py-5">
+        <div class="text-center">
+            <h2 class="text-center section-title">{{locales.our_portfolio}}</h2>
+            <p class="text-center mb-5 w-80">{{locales.our_portfolio_sub_title}}</p>
+        </div>
+        <div class="row g-4 row-cols-1 row-cols-lg-4">
+        {% for item in portfolio %}
+            <div class="col mt-5">
+                <div class="portfolio rounded-3">
+                    <img src="{{item.thumb}}" class="card-img-top" alt="...">
+                    <div class="overlay">
+                        <h5 class="text-white">{{item.title}}</h5>
+                        <p class="text-white">{{item.cat}}</p>
+                        <a 
+                            href="{{item.image}}" 
+                            class="btn btn-pink"
+                            data-fancybox="gallery"
+                            data-caption="{{item.title}}"
+                            data-thumb="{{item.thumb}}"
+                        >
+                            <img src="/assets/images/svg/icon-paw.svg" alt="" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}    
+        </div>
+    </div>
+</section>
+{% endif %}

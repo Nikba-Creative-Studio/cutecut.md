@@ -10,12 +10,23 @@
     background-color: $purple-700;
 }
 
+.bg-purple-light {
+    background-color: $purple-light;
+}
+
 .bg-pink {
     background-color: $pink-500;
 }
 
-.contact {
-    background-color: $purple-light;
+.border-purple {
+    border-color: #EBE5F7!important;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $text-color;
+    font-family: $decor-font;
 }
 
 .feature {
@@ -42,4 +53,53 @@
     align-items: center;
     border-radius: 100%;
     margin-top: -30px;
+}
+
+.hero {
+    background-image: url('../images/svg/hero.svg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $text-color;
+        font-family: $decor-font;
+    }
+}
+
+.hero-image {
+    animation: float 6s ease-in-out infinite;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+        filter: blur(4px);
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+.portfolio {
+    position: relative;
+    overflow: hidden;
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(67, 40, 116, 0.8);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 1;
+        transition: transform 300ms 0ms cubic-bezier(.6, -.28, .735, .045);
+    }
+    &:hover .overlay {
+        display: flex;
+        transition: transform 300ms 0ms cubic-bezier(.6, -.28, .735, .045);
+    }
+    &:hover img {
+        filter: grayscale(1);
+        transform: scale(1.3);
+        transition: all 0.5s ease-in-out;
+    }
 }

@@ -2,26 +2,38 @@
 
 
 {% block head %}
-    {{ parent() }}
+	{{ parent() }}
 {% endblock %}
 
-{% block langue %}{{langue}}{% endblock %}
+{% block langue %}
+	{{langue}}
+{% endblock %}
 
 {% block title %}
-    {{seo.title}}
+	{{seo.title}}
 {% endblock %}
 
 {% block description %}
-    {{seo.desc}}
+	{{seo.desc}}
 {% endblock %}
 
 
 {% block content %}
-    {% block contact %}
-        {{ include('sections/contact.twig') }}
-     {% endblock %}
+
+	{% block hero %}
+		{{ include('sections/hero.twig') }}
+	{% endblock %}
+
+	{% block portfolio %}
+		{{ include('sections/portfolio.twig') }}
+	{% endblock %}
+
+	{% block contact %}
+		{{ include('sections/contact.twig') }}
+	{% endblock %}
+
 {% endblock %}
 
 {% block scripts %}
-    {{ parent() }}
+	{{ parent() }}
 {% endblock %}

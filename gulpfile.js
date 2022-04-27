@@ -77,8 +77,9 @@ function browserSyncReload(done) {
 }
 
 function twig() {
-    //return browserSyncReload();
-    //return pipe(browsersync.stream());
+    return src(path.src.twig, {
+        base: "./resources/views/"
+    }).pipe(browsersync.stream());
 }
 
 

@@ -111,7 +111,7 @@ class App
         return $langues;
     }
 
-	#Get Image from API
+	// Get Image from API
 	public function getImage($id, $params = false) {
 		
 		if($data = $this->cache->get_cache('file_'.$id)){
