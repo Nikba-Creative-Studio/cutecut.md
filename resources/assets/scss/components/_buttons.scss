@@ -1,0 +1,51 @@
+.btn-purple {
+    background-color: $purple-700;
+    color: #fff;
+    font-family: $decor-font;
+    
+    &:hover {
+        background-color: $pink-500;
+        color: #fff;
+    }
+}
+
+.btn-pink {
+    background-color: $pink-500;
+    color: #fff;
+    font-family: $decor-font;
+
+    &:hover {
+        background-color: $purple-700;
+        color: #fff;
+    }
+} 
+
+.btn-outline-pink {
+    border-color: $pink-500;
+    color: $pink-500;
+    &:hover {
+        background-color: $pink-500;
+        color: #fff;
+    }
+}
+
+.btn-outline-purple {
+    border-color: $purple-700;
+    color: $purple-700;
+    &:hover {
+        background-color: $purple-700;
+        color: #fff;
+    }
+}
+
+.icon-paw {
+    background-image: url('../images/svg/icon-paw.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}

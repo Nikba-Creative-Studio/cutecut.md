@@ -1,0 +1,27 @@
+{% extends "layouts/app.twig" %}
+
+
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+
+{% block langue %}{{langue}}{% endblock %}
+
+{% block title %}
+    {{seo.title}}
+{% endblock %}
+
+{% block description %}
+    {{seo.desc}}
+{% endblock %}
+
+
+{% block content %}
+    {% block contact %}
+        {{ include('sections/contact.twig') }}
+     {% endblock %}
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+{% endblock %}

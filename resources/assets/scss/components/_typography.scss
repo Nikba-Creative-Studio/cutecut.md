@@ -1,0 +1,9 @@
+.nav-link {
+    font-family: $decor-font;
+    color: $text-color !important;
+    font-weight: 600 !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: $text-color !important;
+}

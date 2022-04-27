@@ -1,0 +1,45 @@
+.border-bottom {
+    border-bottom: 1px solid #EBE5F7 !important;
+}
+
+.navbar-collapse {
+    justify-content: center;
+}
+
+.bg-purple {
+    background-color: $purple-700;
+}
+
+.bg-pink {
+    background-color: $pink-500;
+}
+
+.contact {
+    background-color: $purple-light;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    margin-top: -30px;
+}

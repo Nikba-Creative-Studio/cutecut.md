@@ -1,0 +1,70 @@
+
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+			<div class="container border-bottom">
+				<a href="/" class="d-flex align-items-center mb-2 text-dark text-decoration-none">
+					<img src="/assets/images/svg/logo.svg" alt="logo" class="mr-2">
+				</a>
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+						<li>
+							<a href="/{{langue}}/" class="nav-link px-4 link-secondary">{{locales.nav_home}}</a>
+						</li>
+						<li>
+							<a href="/{{langue}}/about/" class="nav-link px-4 link-dark">{{locales.nav_about}}</a>
+						</li>
+						<li>
+							<a href="/{{langue}}/services/" class="nav-link px-4 link-dark">{{locales.nav_services}}</a>
+						</li>
+						<li>
+							<a href="/{{langue}}/portfolio/" class="nav-link px-4 link-dark">{{locales.nav_portfolio}}</a>
+						</li>
+						<li>
+							<a href="/{{langue}}/contacts/" class="nav-link px-4 link-dark">{{locales.nav_contacts}}</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="d-none d-sm-flex text-end">
+					<div class="dropdown mx-3">
+						<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+							{% if langue == "en" %}
+                                En
+                            {% elseif langue == "ro" %}
+                                Ro 
+                            {% else %}
+                                Ru
+                            {% endif %}
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+							{% if langue != "ro" %}
+							<li class="nav-item">
+								<a class="dropdown-item" href="/ro{{url}}">{{locales.ro}}</a>
+							</li>
+                            {% endif %}
+                            {% if langue != "ru" %}
+							<li class="nav-item">
+								<a class="dropdown-item" href="/ru{{url}}">{{locales.ru}}</a>
+							</li>
+                            {% endif %}
+                            {% if langue != "en" %}
+                            <li class="nav-item">
+								<a class="dropdown-item" href="/en{{url}}">{{locales.en}}</a>
+							</li>
+                            {% endif %}
+						</ul>
+					</div>
+
+					<button type="button" class="btn btn-pink">
+						<i class="icon-paw"></i>
+						{{locales.schedule}}
+					</button>
+				</div>
+			</div>
+		</nav>
+	</header>
